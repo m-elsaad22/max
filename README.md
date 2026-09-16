@@ -21,6 +21,8 @@
 
 لقطة أوفى في [`site/inventory.json`](site/inventory.json).
 
+تقرير الفحص التفصيلي (أخطاء ونواقص الموقع والقالب): [`site/AUDIT.md`](site/AUDIT.md).
+
 ## الاستخدام
 
 ```bash
