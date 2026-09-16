@@ -1,0 +1,245 @@
+{
+  "checked_at": "2026-09-16T14:55:00Z",
+  "site": {
+    "name": "شركة ماكس آرت",
+    "url": "https://max-art-ae.com",
+    "wp_version": "7.1",
+    "php_version": "8.3.19",
+    "language": "ar",
+    "wpvibe_plugin_version": "1.17.0",
+    "wp_cli_available": true
+  },
+  "connected_user": {
+    "login": "mahmoud",
+    "name": "MAHMOUD ELSAȜD",
+    "roles": [
+      "administrator"
+    ],
+    "id": 3
+  },
+  "active_theme": {
+    "name": "KAYAN Theme",
+    "stylesheet": "kayan-theme",
+    "version": "2.4.7",
+    "wpvibe_authored": false,
+    "uses_tailwind": false,
+    "templates_present": [
+      "index.php",
+      "functions.php",
+      "style.css"
+    ],
+    "templates_missing": [
+      "single.php",
+      "page.php",
+      "archive.php",
+      "404.php",
+      "search.php"
+    ]
+  },
+  "themes": [
+    {
+      "stylesheet": "ServicesTheme(YourColor)",
+      "status": "inactive",
+      "name": "YOURCOLOR THEME 2024"
+    },
+    {
+      "stylesheet": "kayan-theme-wpvibe-draft",
+      "status": "inactive",
+      "name": "KAYAN Theme (WPVibe Draft)"
+    },
+    {
+      "stylesheet": "kayan-theme",
+      "status": "active",
+      "name": "KAYAN Theme"
+    },
+    {
+      "stylesheet": "mahmoud-elsaad-theme",
+      "status": "inactive",
+      "name": "MAHMOUD-ELSAAD Theme"
+    },
+    {
+      "stylesheet": "twentytwenty",
+      "status": "inactive",
+      "name": "Twenty Twenty"
+    }
+  ],
+  "plugins": [
+    {
+      "plugin": "tinymce-advanced/tinymce-advanced",
+      "name": "Advanced Editor Tools",
+      "status": "active",
+      "version": "5.10.1"
+    },
+    {
+      "plugin": "burst-statistics/burst",
+      "name": "إحصائيات Burst - تحليلات صديقة للخصوصية لـ WordPress",
+      "status": "inactive",
+      "version": "3.7.0"
+    },
+    {
+      "plugin": "classic-editor/classic-editor",
+      "name": "Classic Editor المحرر التقليدي",
+      "status": "active",
+      "version": "1.7.0"
+    },
+    {
+      "plugin": "classic-widgets/classic-widgets",
+      "name": "Classic Widgets الودجات التقليدية",
+      "status": "active",
+      "version": "0.3"
+    },
+    {
+      "plugin": "conveythis-translate/index",
+      "name": "ترجمة ConveyThis",
+      "status": "inactive",
+      "version": "270.7"
+    },
+    {
+      "plugin": "domain-mapping-system/dms",
+      "name": "نظام تعيين النطاق (Domain Mapping System\n)",
+      "status": "inactive",
+      "version": "2.2.7"
+    },
+    {
+      "plugin": "independent-analytics/iawp",
+      "name": "Independent Analytics",
+      "status": "inactive",
+      "version": "2.15.5"
+    },
+    {
+      "plugin": "kayan-track-pro-v3/kayan-track-pro",
+      "name": "Kayan Track Pro",
+      "status": "inactive",
+      "version": "3.0.1"
+    },
+    {
+      "plugin": "litespeed-cache/litespeed-cache",
+      "name": "LiteSpeed Cache",
+      "status": "active",
+      "version": "7.9.1"
+    },
+    {
+      "plugin": "multiple-pages-generator-by-porthas/porthas-multi-pages-generator",
+      "name": "Multiple Pages Generator by Themeisle",
+      "status": "inactive",
+      "version": "4.2.2"
+    },
+    {
+      "plugin": "seo-by-rank-math/rank-math",
+      "name": "إضافة Rank Math SEO",
+      "status": "active",
+      "version": "1.0.278"
+    },
+    {
+      "plugin": "rukn-article-generator/rukn-article-generator",
+      "name": "Rukn Article Generator — مولّد المقالات",
+      "status": "inactive",
+      "version": "2.0.0"
+    },
+    {
+      "plugin": "social-chat-buttons/wpscb",
+      "name": "Social Chat Buttons",
+      "status": "inactive",
+      "version": "1.0.5"
+    },
+    {
+      "plugin": "weglot/weglot",
+      "name": "Weglot Translate",
+      "status": "inactive",
+      "version": "6.2"
+    },
+    {
+      "plugin": "vibe-ai/vibe-ai",
+      "name": "WPVibe – Connect Your Site to Claude, ChatGPT & AI Assistants",
+      "status": "active",
+      "version": "1.17.0"
+    },
+    {
+      "plugin": "wordpress-seo/wp-seo",
+      "name": "Yoast SEO",
+      "status": "inactive",
+      "version": "28.5"
+    }
+  ],
+  "content_types": [
+    "post",
+    "page",
+    "attachment",
+    "nav_menu_item",
+    "wp_block",
+    "wp_template",
+    "wp_template_part",
+    "wp_global_styles",
+    "wp_navigation",
+    "wp_font_family",
+    "wp_font_face",
+    "services",
+    "reviews",
+    "faqs",
+    "pricing",
+    "portfolio",
+    "before_after",
+    "kayan_pseo",
+    "rm_content_editor"
+  ],
+  "taxonomies": [
+    "post_tag",
+    "nav_menu",
+    "wp_pattern_category",
+    "cities",
+    "service_categories"
+  ],
+  "counts": {
+    "posts": 315,
+    "pages": 3,
+    "services": 2,
+    "reviews": 1,
+    "faqs": 1,
+    "pricing": 1,
+    "portfolio": 1
+  },
+  "pages": [
+    {
+      "id": 3625,
+      "slug": "mpg_citys-expert-plumbing-services",
+      "status": "publish",
+      "title": "{{mpg_city}}&#8217;s Expert Plumbing Services",
+      "link": "https://max-art-ae.com/mpg_citys-expert-plumbing-services/"
+    },
+    {
+      "id": 153,
+      "slug": "blog",
+      "status": "publish",
+      "title": "Blog",
+      "link": "https://max-art-ae.com/blog/"
+    },
+    {
+      "id": 3,
+      "slug": "privacy-policy",
+      "status": "publish",
+      "title": "Privacy Policy",
+      "link": "https://max-art-ae.com/privacy-policy/"
+    }
+  ],
+  "services": [
+    {
+      "id": 3518,
+      "slug": "roof-insulation",
+      "status": "publish",
+      "title": "عزل أسطح",
+      "link": "https://max-art-ae.com/services/roof-insulation/"
+    },
+    {
+      "id": 3317,
+      "slug": "leak-detection",
+      "status": "publish",
+      "title": "كشف تسربات المياه",
+      "link": "https://max-art-ae.com/services/leak-detection/"
+    }
+  ],
+  "endpoints": {
+    "rest": "https://max-art-ae.com/wp-json/",
+    "wpvibe": "https://max-art-ae.com/wp-json/wpvibe/v1/",
+    "mcp": "https://max-art-ae.com/wp-json/mcp/mcp-adapter-default-server"
+  }
+}
