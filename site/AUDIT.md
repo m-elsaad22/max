@@ -286,7 +286,7 @@ Sitemap: https://max-art-ae.com/mpg-sitemap-plumbing-services.xml
 
 ## ي. تأكيد بصري من المتصفح (16 سبتمبر 2026)
 
-ما ظهر visuellement ولم يكن واضحاً من HTML وحده:
+ما ظهر في المتصفح ولم يكن واضحاً من HTML وحده:
 
 | المشهد | الملاحظة |
 | --- | --- |
