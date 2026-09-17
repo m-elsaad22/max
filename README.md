@@ -30,6 +30,8 @@ python3 scripts/seo_content_audit.py
 python3 scripts/fix_content_quality.py   # ركائز + خدمات + noindex للنسخ
 python3 scripts/remaining_live_fixes.py  # 34 خدمة، هواتف وهمية، noindex Rank Math
 python3 scripts/verify_live.py
+python3 scripts/phase2_cleanup.py          # dry-run only
+python3 scripts/phase2_cleanup.py --execute  # after explicit approval
 ```
 
 إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
@@ -43,7 +45,10 @@ cp .env.example .env
 python3 scripts/wp_connect.py status
 python3 scripts/wp_connect.py get /wp/v2/pages
 python3 scripts/wp_connect.py cli 'plugin list --status=active'
+python3 scripts/phase2_cleanup.py
 ```
+
+Phase 2 (JSON-LD strip, featured-image diversification, local sitemap/plugin delete) is **dry-run by default**. It does not write or delete until `--execute` is passed. Task 1 needs `WP_ROOT` set to the live WordPress document root on the server; this repository is not that tree.
 
 نقاط النهاية:
 
