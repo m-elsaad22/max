@@ -36,6 +36,8 @@ python3 scripts/phase2_cleanup.py --execute  # after explicit approval
 
 إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
 
+إصلاح لوحة التحكم المكسورة (WAF يحجب `load-styles.php`): القسم (ن) في [`site/AUDIT.md`](site/AUDIT.md). مقتطف القالب: [`scripts/maxart-theme-functions-snippet.php`](scripts/maxart-theme-functions-snippet.php).
+
 ## الاستخدام
 
 ```bash
