@@ -17,7 +17,7 @@
 | اللغة | العربية |
 | مقالات | 315 |
 | صفحات منشورة | سياسة الخصوصية، المدونة، من نحن، تواصل معنا |
-| خدمات CPT | 2 (عزل أسطح، كشف تسربات) |
+| خدمات CPT | 10 (حدادة، مظلات، عزل، كشف تسربات، كهرباء، سباكة، دهانات، تكييف، غاز، صيانة مباني) |
 
 لقطة أوفى في [`site/inventory.json`](site/inventory.json).
 
@@ -27,7 +27,12 @@
 
 ```bash
 python3 scripts/seo_content_audit.py
+python3 scripts/fix_content_quality.py   # ركائز + خدمات + noindex للنسخ
+python3 scripts/remaining_live_fixes.py  # 34 خدمة، هواتف وهمية، noindex Rank Math
+python3 scripts/verify_live.py
 ```
+
+إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
 
 ## الاستخدام
 
