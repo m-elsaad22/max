@@ -23,6 +23,12 @@
 
 تقرير الفحص التفصيلي (أخطاء ونواقص الموقع والقالب): [`site/AUDIT.md`](site/AUDIT.md).
 
+تدقيق المحتوى وSEO لكل العناصر المنشورة: [`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md) و[`site/seo-content-audit.csv`](site/seo-content-audit.csv).
+
+```bash
+python3 scripts/seo_content_audit.py
+```
+
 ## الاستخدام
 
 ```bash
