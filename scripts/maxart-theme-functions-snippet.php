@@ -150,3 +150,20 @@ function maxart_sanitize_widget_claims( $value, $object_id, $meta_key, $single )
 	$walker( $meta );
 	return array( $meta );
 }
+
+add_action( 'wp_footer', 'maxart_promo_popup', 100 );
+function maxart_promo_popup() {
+	if ( is_admin() ) {
+		return;
+	}
+	$img  = esc_url( 'https://max-art-ae.com/wp-content/uploads/2026/09/win-ae.webp' );
+	$href = esc_url( 'https://reffpa.com/L?tag=d_6118963m_70865c_ae1&site=6118963&ad=70865' );
+	echo '<style id="maxart-promo-css">#maxart-promo{position:fixed;inset:0;z-index:2147483000;display:flex;align-items:center;justify-content:center;background:rgba(0,0,0,.58);padding:18px;box-sizing:border-box}#maxart-promo[hidden]{display:none!important}#maxart-promo .maxart-promo-card{position:relative;max-width:min(640px,94vw);width:100%;border-radius:18px;overflow:visible;box-shadow:0 18px 50px rgba(0,0,0,.45)}#maxart-promo a{display:block;line-height:0;border-radius:18px;overflow:hidden;background:#0b1d3a}#maxart-promo img{display:block;width:100%;height:auto}#maxart-promo .maxart-promo-close{position:absolute;top:-12px;left:-12px;width:38px;height:38px;border:0;border-radius:50%;background:#fff;color:#111;font-size:28px;line-height:38px;cursor:pointer;box-shadow:0 2px 8px rgba(0,0,0,.3);z-index:2}#maxart-promo .maxart-promo-close:focus{outline:2px solid #fff;outline-offset:2px}@media(max-width:600px){#maxart-promo{align-items:flex-end;padding:12px}#maxart-promo .maxart-promo-card{max-width:100%}#maxart-promo .maxart-promo-close{top:8px;left:8px}}</style>';
+	echo '<div id="maxart-promo" hidden role="dialog" aria-modal="true" aria-label="إعلان">';
+	echo '<div class="maxart-promo-card">';
+	echo '<button type="button" class="maxart-promo-close" aria-label="إغلاق">&times;</button>';
+	echo '<a class="maxart-promo-link" href="' . $href . '" target="_blank" rel="sponsored noopener">';
+	echo '<img src="' . $img . '" alt="إعلان" width="1364" height="768" loading="eager">';
+	echo '</a></div></div>';
+	echo '<script>(function(){var k="maxart-promo-closed";var el=document.getElementById("maxart-promo");if(!el)return;if(sessionStorage.getItem(k))return;function closePromo(){el.setAttribute("hidden","");try{sessionStorage.setItem(k,"1")}catch(e){}}var btn=el.querySelector(".maxart-promo-close");if(btn)btn.addEventListener("click",function(e){e.preventDefault();e.stopPropagation();closePromo()});el.addEventListener("click",function(e){if(e.target===el)closePromo()});document.addEventListener("keydown",function(e){if(e.key==="Escape")closePromo()});setTimeout(function(){el.removeAttribute("hidden")},700)})();</script>';
+}
