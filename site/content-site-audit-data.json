@@ -1,0 +1,1288 @@
+{
+  "checked_at": "2026-09-22 02:29 UTC",
+  "scope": "content+site excluding theme internals",
+  "site": {
+    "name": "شركة ماكس آرت",
+    "wp": "7.1.1",
+    "php": "8.3.19",
+    "wpvibe": "1.17.4",
+    "theme_name": "KAYAN Theme",
+    "theme_note": "template internals excluded from this audit"
+  },
+  "plugins": [
+    {
+      "name": "Advanced Editor Tools",
+      "status": "active",
+      "version": "5.10.1"
+    },
+    {
+      "name": "Burst Statistics - Privacy-Friendly Analytics for WordPress",
+      "status": "inactive",
+      "version": "3.7.1"
+    },
+    {
+      "name": "Classic Editor",
+      "status": "active",
+      "version": "1.7.0"
+    },
+    {
+      "name": "Classic Widgets",
+      "status": "active",
+      "version": "0.3"
+    },
+    {
+      "name": "ConveyThis Translate",
+      "status": "inactive",
+      "version": "270.7"
+    },
+    {
+      "name": "Domain Mapping System",
+      "status": "inactive",
+      "version": "2.2.7"
+    },
+    {
+      "name": "Independent Analytics",
+      "status": "inactive",
+      "version": "2.15.5"
+    },
+    {
+      "name": "Kayan Track Pro",
+      "status": "inactive",
+      "version": "3.0.1"
+    },
+    {
+      "name": "LiteSpeed Cache",
+      "status": "active",
+      "version": "7.9.1"
+    },
+    {
+      "name": "Multiple Pages Generator by Themeisle",
+      "status": "inactive",
+      "version": "4.2.2"
+    },
+    {
+      "name": "Rank Math SEO",
+      "status": "active",
+      "version": "1.0.278"
+    },
+    {
+      "name": "Rukn Article Generator — مولّد المقالات",
+      "status": "inactive",
+      "version": "2.0.0"
+    },
+    {
+      "name": "Social Chat Buttons",
+      "status": "inactive",
+      "version": "1.0.5"
+    },
+    {
+      "name": "Weglot Translate",
+      "status": "inactive",
+      "version": "6.2"
+    },
+    {
+      "name": "WPVibe – Connect Your Site to Claude, ChatGPT & AI Assistants",
+      "status": "active",
+      "version": "1.17.4"
+    },
+    {
+      "name": "Yoast SEO",
+      "status": "inactive",
+      "version": "28.5"
+    }
+  ],
+  "users": [
+    {
+      "ID": 4,
+      "user_login": "cursor",
+      "display_name": "mahmoud ali",
+      "user_email": "rukneltatwer@gmail.com",
+      "roles": "administrator"
+    },
+    {
+      "ID": 2,
+      "user_login": "FXZmeJp9YI",
+      "display_name": "admin",
+      "user_email": "admin@max-art-ae.com",
+      "roles": "administrator"
+    },
+    {
+      "ID": 3,
+      "user_login": "mahmoud",
+      "display_name": "MAHMOUD ELSAȜD",
+      "user_email": "m@rukn-eltatawer.com",
+      "roles": "administrator"
+    }
+  ],
+  "menus": [
+    {
+      "term_id": 4,
+      "name": "Menu 1",
+      "slug": "menu-1",
+      "count": 4
+    },
+    {
+      "term_id": 46,
+      "name": "القائمة الرئيسية",
+      "slug": "%d8%a7%d9%84%d9%82%d8%a7%d8%a6%d9%85%d8%a9-%d8%a7%d9%84%d8%b1%d8%a6%d9%8a%d8%b3%d9%8a%d8%a9",
+      "count": 7
+    },
+    {
+      "term_id": 75,
+      "name": "خدمات التذييل",
+      "slug": "%d8%ae%d8%af%d9%85%d8%a7%d8%aa-%d8%a7%d9%84%d8%aa%d8%b0%d9%8a%d9%8a%d9%84",
+      "count": 11
+    }
+  ],
+  "options": {
+    "blogname": {
+      "exit": 0,
+      "out": "شركة ماكس آرت",
+      "err": ""
+    },
+    "blogdescription": {
+      "exit": 0,
+      "out": "شركة ماكس آرت للصيانة العامة في الإمارات منذ 2008 — أعمال حدادة، تصميم وتركيب مظلات وسواتر وبرجولات، صيانة وترميم مباني، تشطيبات وديكورات، سباكة وكهرباء وعزل. ورشة تصنيع خاصة ومعاينة مجانية.",
+      "err": ""
+    },
+    "posts_per_page": {
+      "exit": 0,
+      "out": "5",
+      "err": ""
+    },
+    "show_on_front": {
+      "exit": 0,
+      "out": "posts",
+      "err": ""
+    },
+    "page_on_front": {
+      "exit": 0,
+      "out": "0",
+      "err": ""
+    },
+    "page_for_posts": {
+      "exit": 0,
+      "out": "0",
+      "err": ""
+    },
+    "permalink_structure": {
+      "exit": 0,
+      "out": "/%postname%/",
+      "err": ""
+    },
+    "timezone_string": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "date_format": {
+      "exit": 0,
+      "out": "Y-m-d",
+      "err": ""
+    },
+    "WPLANG": {
+      "exit": 0,
+      "out": "ar",
+      "err": ""
+    },
+    "blog_public": {
+      "exit": 0,
+      "out": "1",
+      "err": ""
+    },
+    "facebook": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "instagram": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "twitter": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "youtube": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "linkedin": {
+      "exit": 0,
+      "out": "https://www.linkedin.com/in/melsaad1/",
+      "err": ""
+    },
+    "tiktok": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'tiktok' not found."
+    },
+    "whatsapp": {
+      "exit": 0,
+      "out": "https://wa.me/971544437175",
+      "err": ""
+    },
+    "phone": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'phone' not found."
+    },
+    "mobile": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'mobile' not found."
+    },
+    "email": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'email' not found."
+    },
+    "address": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'address' not found."
+    },
+    "rank_math_webmaster": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'rank_math_webmaster' not found."
+    },
+    "rank_math_google_analytic_options": {
+      "exit": 0,
+      "out": "{\n    \"adsense_id\": \"\",\n    \"account_id\": \"351429927\",\n    \"property_id\": \"\",\n    \"view_id\": \"\",\n    \"measurement_id\": \"\",\n    \"stream_name\": \"\",\n    \"country\": \"all\",\n    \"install_code\": \"\",\n    \"anonymize_ip\": \"\",\n    \"local_ga_js\": \"\",\n    \"exclude_loggedin\": \"\"\n}",
+      "err": ""
+    },
+    "rank_math_modules": {
+      "exit": 0,
+      "out": "[\n    \"link-counter\",\n    \"analytics\",\n    \"seo-analysis\",\n    \"sitemap\",\n    \"rich-snippet\",\n    \"woocommerce\",\n    \"buddypress\",\n    \"bbpress\",\n    \"acf\",\n    \"web-stories\",\n    \"content-ai\",\n    \"instant-indexing\",\n    \"local-seo\",\n    \"role-manager\",\n    \"404-monitor\",\n    \"redirections\",\n    \"ai-visibility\"\n]",
+      "err": ""
+    },
+    "rank_math_robots_txt_content": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'rank_math_robots_txt_content' not found."
+    },
+    "rank_math_sitemap": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'rank_math_sitemap' not found."
+    },
+    "rank_math_titles": {
+      "exit": 1,
+      "out": "",
+      "err": "Option 'rank_math_titles' not found."
+    },
+    "litespeed.conf.cache": {
+      "exit": 0,
+      "out": "1",
+      "err": ""
+    },
+    "litespeed.conf.cache-priv": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "litespeed.conf.optm-css_min": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "litespeed.conf.optm-js_min": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "litespeed.conf.optm-css_comb": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    },
+    "litespeed.conf.optm-js_comb": {
+      "exit": 0,
+      "out": "",
+      "err": ""
+    }
+  },
+  "counts": {
+    "post": 1,
+    "post:draft": 0,
+    "post:private": 0,
+    "post:pending": 0,
+    "post:trash": 0,
+    "page": 1,
+    "page:draft": 1,
+    "page:private": 0,
+    "page:pending": 0,
+    "page:trash": 0,
+    "services": 1,
+    "services:draft": 0,
+    "services:private": 0,
+    "services:pending": 0,
+    "services:trash": 0,
+    "reviews": 1,
+    "reviews:draft": 0,
+    "reviews:private": 0,
+    "reviews:pending": 0,
+    "reviews:trash": 0,
+    "faqs": 1,
+    "faqs:draft": 0,
+    "faqs:private": 0,
+    "faqs:pending": 0,
+    "faqs:trash": 0,
+    "pricing": 1,
+    "pricing:draft": 0,
+    "pricing:private": 0,
+    "pricing:pending": 0,
+    "pricing:trash": 0,
+    "portfolio": 1,
+    "portfolio:draft": 0,
+    "portfolio:private": 0,
+    "portfolio:pending": 0,
+    "portfolio:trash": 0,
+    "before_after": 1,
+    "before_after:draft": 0,
+    "before_after:private": 0,
+    "before_after:pending": 0,
+    "before_after:trash": 0
+  },
+  "item_count": 375,
+  "ld_json_in_body": 0,
+  "thin_under_400": 375,
+  "no_featured": 8,
+  "featured_top": [
+    [
+      2585,
+      304
+    ],
+    [
+      3219,
+      21
+    ],
+    [
+      3538,
+      20
+    ],
+    [
+      0,
+      8
+    ],
+    [
+      2526,
+      6
+    ],
+    [
+      3536,
+      2
+    ],
+    [
+      3541,
+      2
+    ],
+    [
+      2565,
+      1
+    ]
+  ],
+  "dates_top": [
+    [
+      "2026-09-11",
+      315
+    ],
+    [
+      "2026-09-19",
+      42
+    ],
+    [
+      "2026-09-17",
+      8
+    ],
+    [
+      "2026-08-08",
+      3
+    ],
+    [
+      "2026-09-16",
+      2
+    ],
+    [
+      "2026-07-30",
+      2
+    ],
+    [
+      "2025-04-02",
+      1
+    ],
+    [
+      "2025-03-14",
+      1
+    ]
+  ],
+  "leftovers": {},
+  "leftover_counts": {},
+  "sql_leftovers": {
+    "97431110184": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "97431553076": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "+974": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "خالد المطيري": {
+      "out": "",
+      "err": "SQL error: خطأ في قاعدة بيانات ووردبريس:  تعذر تنفيذ عملية الاستعلام لأنها تحتوي على بيانات غير صالحة."
+    },
+    "ركن التطور": {
+      "out": "",
+      "err": "SQL error: خطأ في قاعدة بيانات ووردبريس:  تعذر تنفيذ عملية الاستعلام لأنها تحتوي على بيانات غير صالحة."
+    },
+    "rukn": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "ISO 9001": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "0500000000": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "34 خدمة": {
+      "out": "",
+      "err": "SQL error: خطأ في قاعدة بيانات ووردبريس:  تعذر تنفيذ عملية الاستعلام لأنها تحتوي على بيانات غير صالحة."
+    },
+    "5415": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "{{mpg": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "lorem ipsum": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "Suggested text": {
+      "out": "",
+      "err": "SQL error: Table 'maxartae_wp331.wp_posts' doesn't exist"
+    },
+    "م. فريق": {
+      "out": "",
+      "err": "SQL error: خطأ في قاعدة بيانات ووردبريس:  تعذر تنفيذ عملية الاستعلام لأنها تحتوي على بيانات غير صالحة."
+    }
+  },
+  "sql_lengths": {
+    "out": ""
+  },
+  "sql_noindex": {
+    "out": ""
+  },
+  "sql_ldjson": {
+    "out": ""
+  },
+  "sql_featured": {
+    "out": ""
+  },
+  "sql_dates": {
+    "out": ""
+  },
+  "thin_samples": [
+    {
+      "id": 96,
+      "type": "post",
+      "title": "شركة تركيب أبواب أكورديون في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/accordion-door-installation-company-in-sharjah/"
+    },
+    {
+      "id": 94,
+      "type": "post",
+      "title": "شركة تركيب فورسيلنج في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/false-ceiling-installation-company-in-sharjah/"
+    },
+    {
+      "id": 93,
+      "type": "post",
+      "title": "شركة بلاستر و ترميمات في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/plaster-and-restoration-company-in-sharjah/"
+    },
+    {
+      "id": 92,
+      "type": "post",
+      "title": "شركة تصميم وبناء مظلات في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/awning-design-and-construction-company-in-sharjah/"
+    },
+    {
+      "id": 91,
+      "type": "post",
+      "title": "شركة تركيب مطابخ في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/kitchen-installation-company-in-sharjah/"
+    },
+    {
+      "id": 90,
+      "type": "post",
+      "title": "شركة مسابح في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/swimming-pool-company-in-sharjah/"
+    },
+    {
+      "id": 86,
+      "type": "post",
+      "title": "شركة تركيب سيراميك في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/ceramic-installation-company-in-sharjah/"
+    },
+    {
+      "id": 88,
+      "type": "post",
+      "title": "شركة سباكة وصرف صحي سباك في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/plumbing-and-sanitation-company-plumber-in-sharjah/"
+    },
+    {
+      "id": 89,
+      "type": "post",
+      "title": "شركة تنسيق حدائق في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/garden-landscaping-company-in-sharjah/"
+    },
+    {
+      "id": 87,
+      "type": "post",
+      "title": "شركة تركيب كهرباء في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/electrical-installation-company-in-sharjah/"
+    },
+    {
+      "id": 85,
+      "type": "post",
+      "title": "شركة تصميم نوافير وشلالات في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/fountain-and-waterfall-design-company-in-sharjah/"
+    },
+    {
+      "id": 84,
+      "type": "post",
+      "title": "شركة صبغ في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/painting-company-in-sharjah/"
+    },
+    {
+      "id": 83,
+      "type": "post",
+      "title": "شركة تركيب باركيه في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/parquet-installation-company-in-sharjah/"
+    },
+    {
+      "id": 82,
+      "type": "post",
+      "title": "شركة تركيب جبس بورد في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/gypsum-board-installation-company-in-sharjah/"
+    },
+    {
+      "id": 81,
+      "type": "post",
+      "title": "شركة ديكورات في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/decoration-company-in-sharjah/"
+    },
+    {
+      "id": 80,
+      "type": "post",
+      "title": "شركة صيانة عامة في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/general-maintenance-company-in-sharjah/"
+    },
+    {
+      "id": 77,
+      "type": "post",
+      "title": "شركة تركيب بديل الخشب في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/wood-alternative-installation-company-in-sharjah/"
+    },
+    {
+      "id": 76,
+      "type": "post",
+      "title": "شركة تركيب بديل الرخام في الشارقة",
+      "words": 0,
+      "link": "https://max-art-ae.com/marble-alternative-installation-company-in-sharjah/"
+    },
+    {
+      "id": 53,
+      "type": "post",
+      "title": "شركة تنسيق حدائق في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/garden-landscaping-company-in-dubai/"
+    },
+    {
+      "id": 52,
+      "type": "post",
+      "title": "شركة تركيب سباكة وصرف صحي سباك في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/plumbing-and-drainage-installation-company-plumber-in-dubai/"
+    },
+    {
+      "id": 51,
+      "type": "post",
+      "title": "شركة تركيب كهرباء في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/electrical-installation-company-in-dubai/"
+    },
+    {
+      "id": 46,
+      "type": "post",
+      "title": "شركة تركيب فورسيلنج في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/false-ceiling-installation-company-in-dubai/"
+    },
+    {
+      "id": 49,
+      "type": "post",
+      "title": "شركة تركيب ورق جدران في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/wallpaper-installation-company-in-dubai/"
+    },
+    {
+      "id": 48,
+      "type": "post",
+      "title": "شركة تكسير وترميم حمامات في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/bathroom-demolition-and-renovation-company-in-dubai/"
+    },
+    {
+      "id": 42,
+      "type": "post",
+      "title": "شركة تكسير وترميم فلل في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/wood-alternative-installation-company-in-dubai-2/"
+    },
+    {
+      "id": 44,
+      "type": "post",
+      "title": "شركة تصميم وبناء مظلات في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/awning-design-and-construction-company-in-dubai/"
+    },
+    {
+      "id": 45,
+      "type": "post",
+      "title": "شركة بلاستر وترميمات في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/plaster-and-restoration-company-in-dubai/"
+    },
+    {
+      "id": 47,
+      "type": "post",
+      "title": "شركة تركيب أبواب أكورديون في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/accordion-door-installation-company-in-dubai/"
+    },
+    {
+      "id": 43,
+      "type": "post",
+      "title": "شركة تركيب سيراميك في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/ceramic-installation-company-in-dubai/"
+    },
+    {
+      "id": 41,
+      "type": "post",
+      "title": "شركة تركيب بديل الخشب في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/wood-alternative-installation-company-in-dubai/"
+    },
+    {
+      "id": 40,
+      "type": "post",
+      "title": "شركة تركيب بديل الحجر في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/stone-alternative-installation-company-in-dubai/"
+    },
+    {
+      "id": 39,
+      "type": "post",
+      "title": "شركة تركيب بديل الرخام في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/marble-alternative-installation-company-in-dubai/"
+    },
+    {
+      "id": 38,
+      "type": "post",
+      "title": "شركة تركيب مطابخ في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/kitchen-installation-company-in-dubai/"
+    },
+    {
+      "id": 21,
+      "type": "post",
+      "title": "شركة مسابح في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/swimming-pool-company-in-dubai/"
+    },
+    {
+      "id": 20,
+      "type": "post",
+      "title": "شركة صبغ في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/painting-company-in-dubai/"
+    },
+    {
+      "id": 19,
+      "type": "post",
+      "title": "شركة تركيب جبس بورد في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/gypsum-board-installation-company-in-dubai/"
+    },
+    {
+      "id": 11,
+      "type": "post",
+      "title": "شركة تركيب باركيه في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/parquet-installation-company-in-dubai/"
+    },
+    {
+      "id": 9,
+      "type": "post",
+      "title": "شركة ديكورات في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/decoration-company-in-dubai/"
+    },
+    {
+      "id": 12,
+      "type": "post",
+      "title": "شركة تصميم نوافير وشلالات في دبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/fountain-and-waterfall-design-company-in-dubai/"
+    },
+    {
+      "id": 127,
+      "type": "post",
+      "title": "شركة كشف تسربات المياه في أبوظبي",
+      "words": 0,
+      "link": "https://max-art-ae.com/water-leak-detection-company-in-abu-dhabi/"
+    }
+  ],
+  "items_by_type_words": {
+    "post": {
+      "n": 357,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 357,
+      "under1000": 357
+    },
+    "page": {
+      "n": 4,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 4,
+      "under1000": 4
+    },
+    "services": {
+      "n": 10,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 10,
+      "under1000": 10
+    },
+    "reviews": {
+      "n": 1,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 1,
+      "under1000": 1
+    },
+    "faqs": {
+      "n": 1,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 1,
+      "under1000": 1
+    },
+    "pricing": {
+      "n": 1,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 1,
+      "under1000": 1
+    },
+    "portfolio": {
+      "n": 1,
+      "avg": 0,
+      "min": 0,
+      "max": 0,
+      "under400": 1,
+      "under1000": 1
+    }
+  },
+  "duplicate_titles": {
+    "شركة كشف تسربات المياه في أبوظبي": [
+      {
+        "id": 127,
+        "link": "https://max-art-ae.com/water-leak-detection-company-in-abu-dhabi/"
+      },
+      {
+        "id": 2683,
+        "link": "https://max-art-ae.com/shrkh-kshf-tsrbat-almyah-fy-abwzby/"
+      }
+    ],
+    "كشف تسربات المياه": [
+      {
+        "id": 3262,
+        "link": "https://max-art-ae.com/%d9%83%d8%b4%d9%81-%d8%aa%d8%b3%d8%b1%d8%a8%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d9%8a%d8%a7%d9%87/"
+      },
+      {
+        "id": 3317,
+        "link": "https://max-art-ae.com/services/leak-detection/"
+      }
+    ]
+  },
+  "taxonomies_raw": {
+    "category": "[\n    {\n        \"term_id\": 33,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0623\\u0628\\u0648\\u0627\\u0628\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%a3%d8%a8%d9%88%d8%a7%d8%a8\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 18,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0628\\u0627\\u0631\\u0643\\u064a\\u0647\",\n        \"slug\": \"parquet\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 25,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0628\\u062f\\u064a\\u0644 \\u0627\\u0644\\u062d\\u062c\\u0631\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%a8%d8%af%d9%8a%d9%84-%d8%a7%d9%84%d8%ad%d8%ac%d8%b1\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 26,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0628\\u062f\\u064a\\u0644 \\u0627\\u0644\\u062e\\u0634\\u0628\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%a8%d8%af%d9%8a%d9%84-%d8%a7%d9%84%d8%ae%d8%b4%d8%a8\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 24,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0628\\u062f\\u064a\\u0644 \\u0627\\u0644\\u0631\\u062e\\u0627\\u0645\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%a8%d8%af%d9%8a%d9%84-%d8%a7%d9%84%d8%b1%d8%ae%d8%a7%d9%85\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 20,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u062c\\u0628\\u0633 \\u0628\\u0648\\u0631\\u062f\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%ac%d8%a8%d8%b3-%d8%a8%d9%88%d8%b1%d8%af\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 27,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0633\\u064a\\u0631\\u0627\\u0645\\u064a\\u0643\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d8%b3%d9%8a%d8%b1%d8%a7%d9%85%d9%8a%d9%83\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 23,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0645\\u0637\\u0627\\u0628\\u062e\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d9%85%d8%b7%d8%a7%d8%a8%d8%ae\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 30,\n        \"name\": \"\\u062a\\u0631\\u0643\\u064a\\u0628 \\u0648\\u0631\\u0642 \\u062c\\u062f\\u0631\\u0627\\u0646\",\n        \"slug\": \"%d8%aa%d8%b1%d9%83%d9%8a%d8%a8-%d9%88%d8%b1%d9%82-%d8%ac%d8%af%d8%b1%d8%a7%d9%86\",\n        \"description\": \"\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 28,\n        \"name\": \"\\u062a\\u0635\\u0645\\u064a\\u0645 \\u0648\\u0628\\u0646\\u0627\\u0621 \\u0645\\u0638\\u0644\\u0627\\u062a\",\n        \"slug\": \"%d8%aa%d8%b5%d9%85%d9%8a%d9%85-%d9%88%d8%a8%d9%86%d8%a7%d8%a1-%d9%85%d8%b8%d9%84%d8%a7%d8%aa\",\n        \"description\": \"\\u0645\\u0638\\u0644\\u0627\\u062a \\u062a\\u062a\\u062d\\u0645\\u0651\\u0644 \\u0627\\u0644\\u0634\\u0645\\u0633 \\u0627\\u0644\\u0625\\u0645\\u0627\\u0631\\u0627\\u062a\\u064a\\u0629 \\u0648\\u0643\\u0623\\u0646\\u0647\\u0627 \\u0645\\u0648\\u0644\\u0648\\u062f\\u0629 \\u0641\\u064a \\u0627\\u0644\\u0635\\u062d\\u0631\\u0627\\u0621\\u2026 \\u062a\\u0635\\u0645\\u064a\\u0645 \\u0630\\u0643\\u064a\\u060c \\u0645\\u0648\\u0627\\u062f \\u0645\\u0642\\u0627\\u0648\\u0645\\u0629\\u060c \\u0648\\u062a\\u0631\\u0643\\u064a\\u0628 \\u062b\\u0627\\u0628\\u062a \\u0645\\u0627 \\u064a\\u0647\\u062a\\u0632 \\u062d\\u062a\\u0649 \\u0644\\u0648 \\u0627\\u0644\\u0631\\u064a\\u0627\\u062d \\u0642\\u0631\\u0631\\u062a \\u062a\\u0639\\u0645\\u0644 \\u062a\\u0631\\u0646\\u062f.\",\n        \"count\": 2,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 32,\n        \"name\": \"\\u062a\\u0646\\u0633\\u064a\\u0642 \\u062d\\u062f\\u0627\\u0626\\u0642\",\n        \"slug\": \"%d8%aa%d9%86%d8%b3%d9%8a%d9%82-%d8%ad%d8%af%d8%a7%d8%a6%d9%82\",\n        \"description\": \"\\u0646\\u0632\\u0631\\u0639\\u060c \\u0646\\u0646\\u0633\\u0651\\u0642\\u060c \\u0648\\u0646\\u062e\\u0644\\u064a \\u0627\\u0644\\u0645\\u0633\\u0627\\u062d\\u0627\\u062a \\u0627\\u0644\\u062e\\u0636\\u0631\\u0627\\u0621 \\u062a\\u0634\\u",
+    "post_tag": "[\n    {\n        \"term_id\": 8,\n        \"name\": \"\\u0634\\u0631\\u0643\\u0629 \\u0643\\u0634\\u0641 \\u062a\\u0633\\u0631\\u0628\\u0627\\u062a \\u0627\\u0644\\u0645\\u064a\\u0627\\u0647 \\u0641\\u064a \\u0623\\u0628\\u0648\\u0638\\u0628\\u064a\",\n        \"slug\": \"%d8%b4%d8%b1%d9%83%d8%a9-%d9%83%d8%b4%d9%81-%d8%aa%d8%b3%d8%b1%d8%a8%d8%a7%d8%aa-%d8%a7%d9%84%d9%85%d9%8a%d8%a7%d9%87-%d9%81%d9%8a-%d8%a3%d8%a8%d9%88%d8%b8%d8%a8%d9%8a\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    }\n]",
+    "cities": "[\n    {\n        \"term_id\": 66,\n        \"name\": \"\\u0623\\u0628\\u0648\\u0638\\u0628\\u064a\",\n        \"slug\": \"abudhabi\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 67,\n        \"name\": \"\\u0623\\u0645 \\u0627\\u0644\\u0642\\u064a\\u0648\\u064a\\u0646\",\n        \"slug\": \"umm-al-quwain\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 68,\n        \"name\": \"\\u0627\\u0644\\u0634\\u0627\\u0631\\u0642\\u0629\",\n        \"slug\": \"sharjah\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 69,\n        \"name\": \"\\u0627\\u0644\\u0639\\u064a\\u0646\",\n        \"slug\": \"alain\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 70,\n        \"name\": \"\\u0627\\u0644\\u0641\\u062c\\u064a\\u0631\\u0629\",\n        \"slug\": \"fujairah\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 65,\n        \"name\": \"\\u062f\\u0628\\u064a\",\n        \"slug\": \"dubai\",\n        \"description\": \"\",\n        \"count\": 1,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 71,\n        \"name\": \"\\u0631\\u0623\\u0633 \\u0627\\u0644\\u062e\\u064a\\u0645\\u0629\",\n        \"slug\": \"ras-alkhaimah\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    },\n    {\n        \"term_id\": 72,\n        \"name\": \"\\u0639\\u062c\\u0645\\u0627\\u0646\",\n        \"slug\": \"ajman\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    }\n]",
+    "service_categories": "[\n    {\n        \"term_id\": 73,\n        \"name\": \"\\u0643\\u0634\\u0641 \\u062a\\u0633\\u0631\\u0628\\u0627\\u062a\",\n        \"slug\": \"leak-detection\",\n        \"description\": \"\",\n        \"count\": 0,\n        \"parent\": 0\n    }\n]"
+  },
+  "rank_math_samples": [
+    {
+      "id": 96,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 94,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 93,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 92,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 91,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 90,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 86,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 88,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 89,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 87,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 85,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 84,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4035,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4034,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 153,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 3,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4842,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4841,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4840,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4839,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4838,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4837,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4836,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 4835,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 3518,
+      "robots": "",
+      "canonical": ""
+    },
+    {
+      "id": 3317,
+      "robots": "",
+      "canonical": ""
+    }
+  ],
+  "noindex_query": {
+    "out": "",
+    "err": "SQL error: Table 'maxartae_wp331.wp_postmeta' doesn't exist"
+  },
+  "probes": [
+    {
+      "url": "https://max-art-ae.com/",
+      "status": 200,
+      "final": "https://max-art-ae.com/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/robots.txt",
+      "status": 200,
+      "final": "https://max-art-ae.com/robots.txt",
+      "ctype": "text/plain",
+      "bytes": 76,
+      "robots": "",
+      "snippet": "User-agent: *\r Allow: /\r \r Sitemap: https://max-art-ae.com/sitemap_index.xml"
+    },
+    {
+      "url": "https://max-art-ae.com/sitemap_index.xml",
+      "status": 200,
+      "final": "https://max-art-ae.com/sitemap_index.xml",
+      "ctype": "text/xml; charset=UTF-8",
+      "bytes": 778,
+      "robots": "noindex",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"//max-art-ae.com/main-sitemap.xsl\"?> <sitemapindex xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">"
+    },
+    {
+      "url": "https://max-art-ae.com/sitemap.xml",
+      "status": 200,
+      "final": "https://max-art-ae.com/sitemap.xml",
+      "ctype": "application/xml",
+      "bytes": 535,
+      "robots": "",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?> <urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\"> <url><loc>https://max-art-ae.com</loc><changefreq>daily</changefreq><priority>1."
+    },
+    {
+      "url": "https://max-art-ae.com/mpg-sitemap-plumbing-services.xml",
+      "status": 404,
+      "final": "https://max-art-ae.com/mpg-sitemap-plumbing-services.xml",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/page-sitemap.xml",
+      "status": 200,
+      "final": "https://max-art-ae.com/page-sitemap.xml",
+      "ctype": "text/xml; charset=UTF-8",
+      "bytes": 1154,
+      "robots": "noindex",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"//max-art-ae.com/main-sitemap.xsl\"?> <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmln"
+    },
+    {
+      "url": "https://max-art-ae.com/post-sitemap.xml",
+      "status": 200,
+      "final": "https://max-art-ae.com/post-sitemap.xml",
+      "ctype": "text/xml; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "noindex",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"//max-art-ae.com/main-sitemap.xsl\"?> <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmln"
+    },
+    {
+      "url": "https://max-art-ae.com/services-sitemap.xml",
+      "status": 200,
+      "final": "https://max-art-ae.com/services-sitemap.xml",
+      "ctype": "text/xml; charset=UTF-8",
+      "bytes": 1952,
+      "robots": "noindex",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><?xml-stylesheet type=\"text/xsl\" href=\"//max-art-ae.com/main-sitemap.xsl\"?> <urlset xmlns:xsi=\"http://www.w3.org/2001/XMLSchema-instance\" xmln"
+    },
+    {
+      "url": "https://max-art-ae.com/about-us/",
+      "status": 200,
+      "final": "https://max-art-ae.com/about-us/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/contact-us/",
+      "status": 200,
+      "final": "https://max-art-ae.com/contact-us/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/privacy-policy/",
+      "status": 200,
+      "final": "https://max-art-ae.com/privacy-policy/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/blog/",
+      "status": 200,
+      "final": "https://max-art-ae.com/blog/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 278726,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/services/",
+      "status": 500,
+      "final": "https://max-art-ae.com/services/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/services/leak-detection/",
+      "status": 404,
+      "final": "https://max-art-ae.com/services/leak-detection/",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/services/roof-insulation/",
+      "status": 404,
+      "final": "https://max-art-ae.com/services/roof-insulation/",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/reviews/",
+      "status": 500,
+      "final": "https://max-art-ae.com/reviews/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/faqs/",
+      "status": 500,
+      "final": "https://max-art-ae.com/faqs/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/pricing/",
+      "status": 500,
+      "final": "https://max-art-ae.com/pricing/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/portfolio/",
+      "status": 500,
+      "final": "https://max-art-ae.com/portfolio/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/before-after/",
+      "status": 500,
+      "final": "https://max-art-ae.com/before-after/",
+      "snippet": "{\"code\":\"internal_server_error\",\"message\":\"<p>\\u0643\\u0627\\u0646 \\u0647\\u0646\\u0627\\u0643 \\u062e\\u0637\\u0623 \\u0641\\u0627\\u062f\\u062d \\u0641\\u064a \\u0647\\u0630\\u0627 \\u0627\\u0644\\u"
+    },
+    {
+      "url": "https://max-art-ae.com/author/admin/",
+      "status": 200,
+      "final": "https://max-art-ae.com/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/author/mahmoud/",
+      "status": 200,
+      "final": "https://max-art-ae.com/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/en/",
+      "status": 200,
+      "final": "https://max-art-ae.com/en/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/sa/",
+      "status": 200,
+      "final": "https://max-art-ae.com/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/qa/",
+      "status": 200,
+      "final": "https://max-art-ae.com/",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/mpg_citys-expert-plumbing-services/",
+      "status": 404,
+      "final": "https://max-art-ae.com/mpg_citys-expert-plumbing-services/",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/this-page-does-not-exist-audit-404/",
+      "status": 404,
+      "final": "https://max-art-ae.com/this-page-does-not-exist-audit-404/",
+      "snippet": "<!DOCTYPE html><html lang=\"ar\" dir=\"rtl\"><head><meta name=\"viewport\" content=\"width=device-width, initial-scale=1\"><meta charset=\"utf-8\"><meta name=\"theme-color\" content=\"#0A1F4E\">"
+    },
+    {
+      "url": "https://max-art-ae.com/wp-login.php",
+      "status": 200,
+      "final": "https://max-art-ae.com/wp-login.php",
+      "ctype": "text/html; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<!DOCTYPE html> \t<html dir=\"rtl\" lang=\"ar\"> \t<head> \t<meta http-equiv=\"Content-Type\" content=\"text/html; charset=UTF-8\" /> \t<title>دخول &rsaquo; شركة ماكس آرت &#8212; ووردبريس</tit"
+    },
+    {
+      "url": "https://max-art-ae.com/feed/",
+      "status": 200,
+      "final": "https://max-art-ae.com/feed/",
+      "ctype": "application/rss+xml; charset=UTF-8",
+      "bytes": 8000,
+      "robots": "",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" \txmlns:content=\"http://purl.org/rss/1.0/modules/content/\" \txmlns:wfw=\"http://wellformedweb.org/CommentAPI/\" \txmlns:dc=\"http"
+    },
+    {
+      "url": "https://max-art-ae.com/comments/feed/",
+      "status": 200,
+      "final": "https://max-art-ae.com/comments/feed/",
+      "ctype": "application/rss+xml; charset=UTF-8",
+      "bytes": 1084,
+      "robots": "",
+      "snippet": "<?xml version=\"1.0\" encoding=\"UTF-8\"?><rss version=\"2.0\" \txmlns:content=\"http://purl.org/rss/1.0/modules/content/\" \txmlns:dc=\"http://purl.org/dc/elements/1.1/\" \txmlns:atom=\"http://"
+    },
+    {
+      "url": "https://max-art-ae.com/?s=تسرب",
+      "status": 0,
+      "error": "'ascii' codec can't encode characters in position 8-11: ordinal not in range(128)"
+    }
+  ],
+  "homepage": {
+    "html_len": 335668,
+    "promo": true,
+    "promo_delay_3000": true,
+    "win_ae": true,
+    "reffpa": true,
+    "phone_ok": true,
+    "phone_qatar": false,
+    "rukn": true,
+    "claim_34": true,
+    "claim_5415": false,
+    "og_site": true,
+    "ld_json_count": 1,
+    "title": "شركة ماكس آرت للصيانة في الإمارات",
+    "h1": [
+      "ماكس آرت — <em>الحدادة والمظلات والصيانة العامة</em> في الإمارات منذ 2008"
+    ],
+    "tel_links": [
+      "tel:+971544437175",
+      "tel:+971544437175",
+      "tel:+971544437175",
+      "tel:+971544437175",
+      "tel:+971544437175"
+    ],
+    "wa_links": [
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175",
+      "https://wa.me/971544437175"
+    ],
+    "social_links": [
+      "https://www.linkedin.com/in/melsaad1/"
+    ],
+    "mpg": false
+  },
+  "comments": {
+    "all": "{\n    \"approved\": 0,\n    \"awaiting_moderation\": 16,\n    \"spam\": 0,\n    \"trash\": 0,\n    \"total_comments\": 16\n}"
+  },
+  "media": "[\n    {\n        \"ID\": 4929,\n        \"post_title\": \"win-ae\",\n        \"post_mime_t"
+}
