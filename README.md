@@ -25,6 +25,8 @@
 
 تدقيق المحتوى وSEO لكل العناصر المنشورة: [`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md) و[`site/seo-content-audit.csv`](site/seo-content-audit.csv).
 
+فحص 22 سبتمبر 2026 للمحتوى والموقع **بدون القالب** (قبل استبداله بركن التطور — الإمارات): [`site/CONTENT_SITE_AUDIT.md`](site/CONTENT_SITE_AUDIT.md).
+
 ```bash
 python3 scripts/seo_content_audit.py
 python3 scripts/fix_content_quality.py   # ركائز + خدمات + noindex للنسخ
