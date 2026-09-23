@@ -42,7 +42,7 @@
     .top-inner { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 10px 0; }
     .brand { display: flex; align-items: center; gap: 10px; font-weight: 800; }
     .brand img { width: 46px; height: 46px; border-radius: 10px; background: #fff; object-fit: contain; }
-    .top-phone { background: var(--gold); color: var(--navy); font-weight: 800; padding: 8px 14px; border-radius: 999px; white-space: nowrap; }
+    .top-phone { background: var(--gold); color: var(--navy); font-weight: 800; padding: 8px 14px; border-radius: 999px; white-space: nowrap; unicode-bidi: isolate; }
     .hero {
       background:
         linear-gradient(180deg, rgba(10,39,68,.88), rgba(10,39,68,.72)),
@@ -64,7 +64,9 @@
     .cards .grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
     .card { background: var(--card); border-radius: 18px; padding: 22px; box-shadow: 0 10px 30px rgba(10,39,68,.08); }
     .card h2 { font-size: 22px; margin-bottom: 8px; }
-    .card ul { margin-top: 10px; padding-inline-start: 18px; color: var(--muted); line-height: 1.9; }
+    .card ul { margin-top: 10px; padding: 0; list-style: none; color: var(--muted); line-height: 1.9; }
+    .card li { position: relative; padding-inline-start: 16px; }
+    .card li::before { content: "•"; position: absolute; inset-inline-start: 0; color: var(--gold); font-weight: 800; }
     .section { padding: 42px 0; }
     .section h2 { font-size: 28px; margin-bottom: 8px; }
     .lead { color: var(--muted); margin-bottom: 18px; }
@@ -105,7 +107,7 @@
         <img src="https://max-art-ae.com/wp-content/uploads/2026/07/1783747619594.webp" alt="ماكس آرت" width="46" height="46" />
         <span>ماكس آرت</span>
       </a>
-      <a class="top-phone" data-maxart-track="call" href="tel:+971544437175">054 443 7175</a>
+      <a class="top-phone" dir="ltr" data-maxart-track="call" href="tel:+971544437175">054 443 7175</a>
     </div>
   </header>
 
@@ -224,7 +226,7 @@
         <h2>عندك تسرب أو سطح يحتاج عزل؟</h2>
         <p class="lead" style="color:#d9e4ef">اتصل الآن أو أرسل واتساب — نحدد المعاينة في موقعك.</p>
         <div class="cta-row">
-          <a class="btn btn-call" data-maxart-track="call" href="tel:+971544437175">اتصال 054 443 7175</a>
+          <a class="btn btn-call" data-maxart-track="call" href="tel:+971544437175">اتصال <span dir="ltr">054 443 7175</span></a>
           <a class="btn btn-wa" data-maxart-track="whatsapp" href="https://wa.me/971544437175?text=%D8%A7%D9%84%D8%B3%D9%84%D8%A7%D9%85%20%D8%B9%D9%84%D9%8A%D9%83%D9%85%D8%8C%20%D8%A3%D8%B1%D9%8A%D8%AF%20%D9%83%D8%B4%D9%81%20%D8%AA%D8%B3%D8%B1%D8%A8%D8%A7%D8%AA%20%D8%A3%D9%88%20%D8%B9%D8%B2%D9%84%20%D8%A3%D8%B3%D8%B7%D8%AD">واتساب مباشر</a>
         </div>
       </div>
