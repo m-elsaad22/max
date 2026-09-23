@@ -32,6 +32,7 @@ python3 scripts/remaining_live_fixes.py  # 34 خدمة، هواتف وهمية،
 python3 scripts/verify_live.py
 python3 scripts/phase2_cleanup.py          # dry-run only
 python3 scripts/phase2_cleanup.py --execute  # after explicit approval
+python3 scripts/update_homepage_focus.py   # تركيز الرئيسية على كشف التسربات وعزل الأسطح
 ```
 
 إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
