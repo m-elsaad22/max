@@ -32,11 +32,14 @@ python3 scripts/remaining_live_fixes.py  # 34 خدمة، هواتف وهمية،
 python3 scripts/verify_live.py
 python3 scripts/phase2_cleanup.py          # dry-run only
 python3 scripts/phase2_cleanup.py --execute  # after explicit approval
+python3 scripts/publish_ads_landing.py        # صفحة /ads و /ads.html مع تتبع IP
 ```
 
 إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
 
 إصلاح لوحة التحكم المكسورة (WAF يحجب `load-styles.php`): القسم (ن) في [`site/AUDIT.md`](site/AUDIT.md). مقتطف القالب: [`scripts/maxart-theme-functions-snippet.php`](scripts/maxart-theme-functions-snippet.php).
+
+صفحة إعلانات كشف التسربات وعزل الأسطح: [`scripts/ads-landing/ads.html`](scripts/ads-landing/ads.html) تُنشر على `/ads/` و`/ads.html`. تتبع الزيارات وضغطات الاتصال/واتساب مع عنوان IP في لوحة ووردبريس «تتبع الإعلانات». النشر: `python3 scripts/publish_ads_landing.py`.
 
 ## الاستخدام
 
