@@ -1,8 +1,12 @@
 #!/usr/bin/env python3
 """Rewrite live homepage copy to lead with leak detection and roof insulation.
 
-Updates HomeIntro, Rank Math homepage SEO, blogdescription, and the
-homepage widget_post_meta records (3591–3600) on max-art-ae.com.
+Updates HomeIntro, Rank Math homepage SEO, blogdescription, and homepage
+widget copy on max-art-ae.com.
+
+WPVibe cannot `post meta update` the theme's `widgets__posts` type, so the
+script clones each homepage widget onto a normal draft post (maxart-hp-*)
+and retargets `widgets_home__meta` at those IDs.
 """
 
 from __future__ import annotations
@@ -34,7 +38,7 @@ FINDER_SERVICES = "\n".join(
         "صيانة عامة",
         "صيانة مباني",
         "ترميم منازل قديمة",
-        "أعمال الحدادة",
+        "حدادة وتشكيل معادن",
         "تصميم وبناء مظلات",
         "تركيب مظلات وسواتر",
         "تركيب برجولات",
@@ -68,20 +72,6 @@ def option_json(url: str, user: str, password: str, name: str, value) -> None:
             user,
             password,
             f"option update {name} {encoded} --format=json",
-            confirm=True,
-        ),
-    )
-
-
-def meta_json(url: str, user: str, password: str, pid: int, key: str, value) -> None:
-    encoded = json.dumps(json.dumps(value, ensure_ascii=False))
-    log_cli(
-        f"meta {pid} {key}",
-        cli(
-            url,
-            user,
-            password,
-            f"post meta update {pid} {key} {encoded} --format=json --force",
             confirm=True,
         ),
     )
@@ -301,34 +291,24 @@ def patch_stats(meta: dict) -> dict:
 def patch_compare(meta: dict) -> dict:
     data = deepcopy(meta)
     data["content"] = "مقارنة صريحة بين طريقتنا في كشف التسربات والعزل وما هو شائع في السوق."
-    extra = [
-        {
-            "label": "كشف تسرب دون تكسير عشوائي",
-            "us_value": "yes",
-            "us_text": "",
-            "others_value": "no",
-            "others_text": "تكسير تجريبي غالباً",
-        },
-        {
-            "label": "عزل بضمان مكتوب",
-            "us_value": "yes",
-            "us_text": "",
-            "others_value": "no",
-            "others_text": "طبقة رخيصة بلا ضمان",
-        },
-        {
-            "label": "معالجة الرطوبة من المصدر",
-            "us_value": "yes",
-            "us_text": "",
-            "others_value": "no",
-            "others_text": "دهان فوق البلل",
-        },
-    ]
     rows = list(data.get("compare_rows") or [])
-    labels = {r.get("label") for r in rows if isinstance(r, dict)}
-    for row in extra:
-        if row["label"] not in labels:
-            rows.insert(0, row)
+    rewrites = [
+        ("ورشة تصنيع مملوكة للشركة", "كشف تسرب دون تكسير عشوائي"),
+        ("معاينة الموقع قبل التسعير", "معاينة التسرب والعزل أولاً"),
+        ("عرض سعر مكتوب ومفصّل", "عرض سعر مكتوب للعزل والإصلاح"),
+        ("فريق تركيب موظّف لدى الشركة", "فريق كشف وعزل موظّف لدينا"),
+        ("عدد الخدمات", "تركيز التسربات والعزل"),
+        ("تخصص واحد", "خدمات عامة فقط"),
+    ]
+    by_old = {old: new for old, new in rewrites}
+    for row in rows:
+        if not isinstance(row, dict):
+            continue
+        label = row.get("label")
+        if label in by_old:
+            row["label"] = by_old[label]
+        if row.get("others_text") in by_old:
+            row["others_text"] = by_old[row["others_text"]]
     data["compare_rows"] = rows
     return data
 
@@ -484,60 +464,163 @@ def patch_why_options() -> tuple[list, list]:
     return steps, features
 
 
-def main() -> int:
-    url, user, password = config()
-    print("update homepage focus: leaks + insulation first")
-
-    intro = get_option_json(url, user, password, "HomeIntro")
-    option_json(url, user, password, "HomeIntro", patch_home_intro(intro))
-
-    steps, features = patch_why_options()
-    option_json(url, user, password, "kayan_hp_why_steps", steps)
-    option_json(url, user, password, "kayan_hp_why_features", features)
-
-    blogdescription = (
-        "شركة ماكس آرت لكشف تسربات المياه وعزل الأسطح ومعالجة الرطوبة "
-        "وحل ارتفاع فاتورة المياه في الإمارات منذ 2008 — مع صيانة عامة وحدادة ومظلات. معاينة مجانية."
+def find_hp_post(url: str, user: str, password: str, slug: str) -> int | None:
+    data = cli(
+        url,
+        user,
+        password,
+        f"post list --s={slug} --post_status=draft,publish --post_type=post --fields=ID,post_title,post_status --format=json --posts_per_page=20",
     )
+    raw = data.get("stdout") or "[]"
+    try:
+        rows = json.loads(raw)
+    except json.JSONDecodeError:
+        return None
+    if not isinstance(rows, list):
+        return None
+    for row in rows:
+        title = (row.get("post_title") or "").strip()
+        if title == slug:
+            return int(row["ID"])
+    return None
+
+
+def ensure_hp_post(url: str, user: str, password: str, slug: str) -> int:
+    existing = find_hp_post(url, user, password, slug)
+    if existing:
+        print("reuse clone", slug, existing)
+        return existing
+    created = cli(
+        url,
+        user,
+        password,
+        f"post create --post_title={slug} --post_status=draft --post_type=post",
+        confirm=True,
+    )
+    log_cli(f"create {slug}", created)
+    payload = json.loads(created.get("stdout") or "{}")
+    pid = int(payload.get("ID") or 0)
+    if not pid:
+        raise RuntimeError(f"failed to create clone post {slug}")
+    return pid
+
+
+def write_widget_clone(
+    url: str,
+    user: str,
+    password: str,
+    *,
+    source_id: int,
+    slug: str,
+    patch_fn,
+    option_name: str,
+    option_key: str,
+) -> int:
+    source = get_meta_json(url, user, password, source_id, "widget_post_meta")
+    if not isinstance(source, dict):
+        print("skip missing source meta", source_id)
+        return 0
+    clone_id = ensure_hp_post(url, user, password, slug)
+    patched = patch_fn(source)
+    encoded = json.dumps(json.dumps(patched, ensure_ascii=False))
     log_cli(
-        "blogdescription",
+        f"meta {clone_id} {slug}",
         cli(
             url,
             user,
             password,
-            "option update blogdescription " + json.dumps(blogdescription, ensure_ascii=False),
+            f"post meta update {clone_id} widget_post_meta {encoded}",
             confirm=True,
         ),
     )
+    log_cli(
+        f"retarget {option_key}",
+        cli(
+            url,
+            user,
+            password,
+            f"option patch update {option_name} {option_key} widget_post__id {clone_id}",
+            confirm=True,
+        ),
+    )
+    return clone_id
 
-    titles = get_option_json(url, user, password, "rank-math-options-titles")
-    if isinstance(titles, dict):
-        titles["homepage_title"] = "كشف تسربات المياه وعزل الأسطح | شركة ماكس آرت"
-        titles["homepage_description"] = (
-            "كشف تسربات المياه وعزل الأسطح ومعالجة الرطوبة وحل ارتفاع فاتورة المياه في الإمارات منذ 2008، "
-            "مع صيانة عامة وحدادة ومظلات. معاينة مجانية."
+
+def main() -> int:
+    url, user, password = config()
+    widgets_only = "--widgets-only" in sys.argv
+    print("update homepage focus: leaks + insulation first")
+
+    if not widgets_only:
+        intro = get_option_json(url, user, password, "HomeIntro")
+        option_json(url, user, password, "HomeIntro", patch_home_intro(intro))
+
+        steps, features = patch_why_options()
+        option_json(url, user, password, "kayan_hp_why_steps", steps)
+        option_json(url, user, password, "kayan_hp_why_features", features)
+
+        blogdescription = (
+            "شركة ماكس آرت لكشف تسربات المياه وعزل الأسطح ومعالجة الرطوبة "
+            "وحل ارتفاع فاتورة المياه في الإمارات منذ 2008 — مع صيانة عامة وحدادة ومظلات. معاينة مجانية."
         )
-        option_json(url, user, password, "rank-math-options-titles", titles)
+        log_cli(
+            "blogdescription",
+            cli(
+                url,
+                user,
+                password,
+                "option update blogdescription " + json.dumps(blogdescription, ensure_ascii=False),
+                confirm=True,
+            ),
+        )
 
-    patches = {
-        3589: patch_cta,
-        3591: patch_finder,
-        3592: patch_services,
-        3593: patch_benefits,
-        3594: patch_stats,
-        3595: patch_compare,
-        3596: patch_cities,
-        3597: patch_hub,
-        3598: patch_blog,
-        3599: patch_faq,
-        3600: patch_contact,
-    }
-    for pid, fn in patches.items():
-        meta = get_meta_json(url, user, password, pid, "widget_post_meta")
-        if not isinstance(meta, dict):
-            print("skip non-dict meta", pid, type(meta))
-            continue
-        meta_json(url, user, password, pid, "widget_post_meta", fn(meta))
+        titles = get_option_json(url, user, password, "rank-math-options-titles")
+        if isinstance(titles, dict):
+            titles["homepage_title"] = "كشف تسربات المياه وعزل الأسطح | شركة ماكس آرت"
+            titles["homepage_description"] = (
+                "كشف تسربات المياه وعزل الأسطح ومعالجة الرطوبة وحل ارتفاع فاتورة المياه في الإمارات منذ 2008، "
+                "مع صيانة عامة وحدادة ومظلات. معاينة مجانية."
+            )
+            option_json(url, user, password, "rank-math-options-titles", titles)
+
+    clones = [
+        (3591, "maxart-hp-finder", patch_finder, "1QsZmRLElt"),
+        (3592, "maxart-hp-services", patch_services, "f2zweOA2b0"),
+        (3593, "maxart-hp-benefits", patch_benefits, "D2da7xoDJh"),
+        (3594, "maxart-hp-stats", patch_stats, "ZzedHTairS"),
+        (3595, "maxart-hp-compare", patch_compare, "ZIyTaVE04x"),
+        (3596, "maxart-hp-cities", patch_cities, "3t7DZz7KPs"),
+        (3597, "maxart-hp-hub", patch_hub, "iGCbQHTBNq"),
+        (3598, "maxart-hp-blog", patch_blog, "NCFHxS4dLJ"),
+        (3599, "maxart-hp-faq", patch_faq, "xWzXP5kzM9"),
+        (3600, "maxart-hp-contact", patch_contact, "pM7KwXZy6m"),
+    ]
+    for source_id, slug, fn, option_key in clones:
+        write_widget_clone(
+            url,
+            user,
+            password,
+            source_id=source_id,
+            slug=slug,
+            patch_fn=fn,
+            option_name="widgets_home__meta",
+            option_key=option_key,
+        )
+
+    cta_source = get_meta_json(url, user, password, 3589, "widget_post_meta")
+    if isinstance(cta_source, dict):
+        cta_id = ensure_hp_post(url, user, password, "maxart-hp-cta")
+        encoded = json.dumps(json.dumps(patch_cta(cta_source), ensure_ascii=False))
+        log_cli(
+            "meta cta",
+            cli(url, user, password, f"post meta update {cta_id} widget_post_meta {encoded}", confirm=True),
+        )
+        order = get_option_json(url, user, password, "kayan_homepage_sections_order")
+        if isinstance(order, dict):
+            for section in order.get("sections") or []:
+                if str(section.get("widget_post__id") or "") == "3589":
+                    section["widget_post__id"] = str(cta_id)
+            option_json(url, user, password, "kayan_homepage_sections_order", order)
 
     log_cli("purge", cli(url, user, password, "cache purge all", confirm=True))
     print("homepage focus update done")
