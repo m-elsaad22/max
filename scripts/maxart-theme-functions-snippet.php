@@ -1,7 +1,9 @@
 <?php
 /**
- * Snippet appended to kayan-theme/functions.php on the live site.
- * Re-apply via WPVibe file/edit if a draft-theme publish overwrites it.
+ * Snippet inserted at the TOP of kayan-theme/functions.php on the live site
+ * (before ThemeStatic). Re-apply via python3 scripts/apply_admin_mu_fix.py
+ * after a theme update. Prefer copying scripts/mu-plugins/maxart-admin-fix.php
+ * into wp-content/mu-plugins/ so the next theme update cannot wipe it.
  */
 
 if ( ! defined( 'CONCATENATE_SCRIPTS' ) ) {

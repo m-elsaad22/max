@@ -18,15 +18,84 @@ from apply_live_fixes import cli, config, log_cli, request  # noqa: E402
 
 ROOT = Path(__file__).resolve().parents[1]
 MU_PLUGIN = ROOT / "scripts" / "mu-plugins" / "maxart-admin-fix.php"
-THEME_TAIL = """function kayan_send_404_status() {
-	if ( is_404() ) {
-		status_header( 404 );
-		nocache_headers();
+THEME_HEAD_OLD = """defined( 'ABSPATH' ) || exit;
+@ini_set( 'upload_max_size' , '64M' );"""
+
+THEME_HEAD_NEW = """defined( 'ABSPATH' ) || exit;
+
+if ( ! defined( 'MAXART_ADMIN_FIX' ) ) {
+	define( 'MAXART_ADMIN_FIX', true );
+	if ( ! defined( 'CONCATENATE_SCRIPTS' ) ) {
+		define( 'CONCATENATE_SCRIPTS', false );
 	}
+	if ( ! defined( 'COMPRESS_SCRIPTS' ) ) {
+		define( 'COMPRESS_SCRIPTS', false );
+	}
+	if ( ! defined( 'COMPRESS_CSS' ) ) {
+		define( 'COMPRESS_CSS', false );
+	}
+	$GLOBALS['concatenate_scripts'] = false;
+	$GLOBALS['compress_scripts']    = false;
+	$GLOBALS['compress_css']        = false;
+	function maxart_disable_admin_concat() {
+		global $wp_styles, $wp_scripts;
+		$GLOBALS['concatenate_scripts'] = false;
+		$GLOBALS['compress_scripts']    = false;
+		$GLOBALS['compress_css']        = false;
+		if ( isset( $wp_styles ) && is_object( $wp_styles ) ) {
+			$wp_styles->do_concat = false;
+		}
+		if ( isset( $wp_scripts ) && is_object( $wp_scripts ) ) {
+			$wp_scripts->do_concat = false;
+		}
+	}
+	add_action( 'init', 'maxart_disable_admin_concat', 0 );
+	add_action( 'admin_init', 'maxart_disable_admin_concat', 0 );
+	add_action( 'login_init', 'maxart_disable_admin_concat', 0 );
+	add_action( 'admin_enqueue_scripts', 'maxart_disable_admin_concat', 0 );
+	add_action( 'admin_print_styles', 'maxart_disable_admin_concat', 0 );
+	add_action( 'admin_print_scripts', 'maxart_disable_admin_concat', 0 );
+	add_action( 'login_enqueue_scripts', 'maxart_disable_admin_concat', 0 );
+	add_action( 'wp_default_styles', 'maxart_disable_admin_concat', 99 );
+	add_action( 'wp_default_scripts', 'maxart_disable_admin_concat', 99 );
+	function maxart_print_core_admin_css() {
+		$ver   = get_bloginfo( 'version' ) . '-maxart3';
+		$rtl   = is_rtl() ? '-rtl' : '';
+		$admin = trailingslashit( admin_url( 'css' ) );
+		$inc   = trailingslashit( includes_url( 'css' ) );
+		$hrefs = array(
+			$inc . 'dashicons.min.css',
+			$inc . 'buttons' . $rtl . '.min.css',
+			$inc . 'admin-bar' . $rtl . '.min.css',
+			$inc . 'wp-auth-check' . $rtl . '.min.css',
+			$inc . 'dist/base-styles/admin-schemes.min.css',
+			$admin . 'common' . $rtl . '.min.css',
+			$admin . 'forms' . $rtl . '.min.css',
+			$admin . 'admin-menu' . $rtl . '.min.css',
+			$admin . 'dashboard' . $rtl . '.min.css',
+			$admin . 'list-tables' . $rtl . '.min.css',
+			$admin . 'edit' . $rtl . '.min.css',
+			$admin . 'revisions' . $rtl . '.min.css',
+			$admin . 'media' . $rtl . '.min.css',
+			$admin . 'themes' . $rtl . '.min.css',
+			$admin . 'about' . $rtl . '.min.css',
+			$admin . 'nav-menus' . $rtl . '.min.css',
+			$admin . 'widgets' . $rtl . '.min.css',
+			$admin . 'site-icon' . $rtl . '.min.css',
+			$admin . 'l10n' . $rtl . '.min.css',
+			$admin . 'wp-tooltip.min.css',
+			$admin . 'login' . $rtl . '.min.css',
+			$admin . 'colors/fresh/colors' . $rtl . '.min.css',
+		);
+		foreach ( $hrefs as $href ) {
+			echo '<link rel="stylesheet" href="' . esc_url( $href . '?ver=' . rawurlencode( $ver ) ) . '" media="all" />' . "\\n";
+		}
+	}
+	add_action( 'admin_head', 'maxart_print_core_admin_css', 1 );
+	add_action( 'login_head', 'maxart_print_core_admin_css', 1 );
 }
-add_action( 'wp', 'kayan_send_404_status', 1 );
-// ============================================================
-"""
+
+@ini_set( 'upload_max_size' , '64M' );"""
 
 
 def snippet_body() -> str:
@@ -107,8 +176,8 @@ def append_theme_functions(url: str, user: str, password: str, code: str) -> Non
             method="POST",
             payload={
                 "path": "functions.php",
-                "old_content": THEME_TAIL,
-                "new_content": THEME_TAIL + "\n" + code,
+                "old_content": THEME_HEAD_OLD,
+                "new_content": THEME_HEAD_NEW,
             },
         )
         print("functions.php edit", json.dumps(edited, ensure_ascii=False)[:800] if not isinstance(edited, str) else edited[:800])
