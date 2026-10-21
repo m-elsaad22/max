@@ -32,11 +32,14 @@ python3 scripts/remaining_live_fixes.py  # 34 خدمة، هواتف وهمية،
 python3 scripts/verify_live.py
 python3 scripts/phase2_cleanup.py          # dry-run only
 python3 scripts/phase2_cleanup.py --execute  # after explicit approval
+python3 scripts/publish_sitemap_fix.py        # إصلاح sitemap_index.xml وrobots.txt
 ```
 
 إصلاحات 17 سبتمبر 2026 موثّقة في [`site/AUDIT.md`](site/AUDIT.md) القسم (م) و[`site/SEO_CONTENT_AUDIT.md`](site/SEO_CONTENT_AUDIT.md).
 
 إصلاح لوحة التحكم المكسورة (WAF يحجب `load-styles.php`): القسم (ن) في [`site/AUDIT.md`](site/AUDIT.md). مقتطف القالب: [`scripts/maxart-theme-functions-snippet.php`](scripts/maxart-theme-functions-snippet.php).
+
+خرائط Rank Math: بعد تحديث القالب/Polylang قد تختفي قواعد `sitemap_index.xml`. إعادة التطبيق: `python3 scripts/publish_sitemap_fix.py`.
 
 ## الاستخدام
 

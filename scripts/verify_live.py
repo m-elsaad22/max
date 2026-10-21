@@ -58,6 +58,8 @@ def main() -> int:
         "https://max-art-ae.com/sa/",
         "https://max-art-ae.com/robots.txt",
         "https://max-art-ae.com/sitemap_index.xml",
+        "https://max-art-ae.com/sitemap.xml",
+        "https://max-art-ae.com/post-sitemap1.xml",
         "https://max-art-ae.com/page-sitemap.xml",
         "https://max-art-ae.com/services-sitemap.xml",
     ]
